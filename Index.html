@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Talent Scout AI</title>
+
+    <link rel="stylesheet" href="style.css">
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/pdf.js/3.11.174/pdf.min.js"></script>
+</head>
+
+<body>
+
+<header>
+    <h1>🤖 Talent Scout AI</h1>
+    <p>AI-powered Resume Screening & Talent Discovery</p>
+</header>
+
+<main>
+
+    <section class="card">
+
+        <h2>📄 Upload Resume</h2>
+
+        <input type="file" id="resumeFile" accept=".pdf,.txt">
+
+        <h3>🎯 Required Skills</h3>
+
+        <input
+            type="text"
+            id="requiredSkills"
+            placeholder="Python, Java, Machine Learning, SQL"
+        >
+
+        <button onclick="analyzeResume()">
+            🔍 Analyze Resume
+        </button>
+
+    </section>
+
+
+    <section id="result" class="card hidden">
+
+        <h2>🏆 Talent Scout Report</h2>
+
+        <div class="scoreBox">
+            <span id="score">0%</span>
+            <p>Skill Match Score</p>
+        </div>
+
+        <div class="report">
+
+            <h3>✅ Matched Skills</h3>
+            <p id="matchedSkills">None</p>
+
+            <h3>❌ Missing Skills</h3>
+            <p id="missingSkills">None</p>
+
+            <h3>📋 Resume Completeness</h3>
+            <p id="completeness">Checking...</p>
+
+            <h3>⚠️ Resume Quality</h3>
+            <p id="quality">Checking...</p>
+
+            <h3>💡 Recommendation</h3>
+            <p id="recommendation">Checking...</p>
+
+        </div>
+
+    </section>
+
+
+    <section class="card">
+
+        <h2>🧩 Talent Quest</h2>
+
+        <div class="mission">
+            <h3>Mission 1 — Logic</h3>
+            <p>
+                If a train travels 60 km in 1 hour,
+                how far will it travel in 3 hours?
+            </p>
+
+            <input id="logicAnswer" type="number">
+
+            <button onclick="checkLogic()">
+                Submit
+            </button>
+
+            <p id="logicResult"></p>
+        </div>
+
+
+        <div class="mission">
+
+            <h3>💡 Mission 2 — Product Thinking</h3>
+
+            <p>
+                Suggest one feature that could improve
+                a college attendance application.
+            </p>
+
+            <textarea id="idea"></textarea>
+
+            <button onclick="checkIdea()">
+                Submit Idea
+            </button>
+
+            <p id="ideaResult"></p>
+
+        </div>
+
+    </section>
+
+</main>
+
+
+<footer>
+    <p>Talent Scout AI © 2026</p>
+</footer>
+
+
+<script src="script.js"></script>
+
+</body>
+</html>
